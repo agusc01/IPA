@@ -9,9 +9,7 @@
   <link rel="stylesheet" type="text/css" href="public/dist/css/min/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="public/dist/css/min/style.min.css">
 
-
-
-  <title id="page-title"></title>
+  <title class="page-title"></title>
 </head>
 
 <body class="bg-dark text-light min-vh-100 position-relative">
@@ -23,28 +21,31 @@
       <div class="row">
 
         <div class="col-md-6 form-floating">
-          <textarea class="form-control bg-dark text-info" id="comment" name="words"
-            placeholder="Write here"></textarea>
-          <label for="comment" class="mx-3">Write here !</label>
+          <textarea class="words form-control bg-dark text-info " placeholder="Write here"></textarea>
+          <label for="words" class="mx-3">Write here !</label>
         </div>
 
         <div class="col-md-6 my-2 my-md-0">
-          <textarea class="form-control bg-dark text-light" name="text" placeholder="Answer"
-            readonly>Translation</textarea>
+          <textarea class="translation form-control bg-dark text-light " placeholder="Translation" readonly></textarea>
         </div>
 
       </div>
-      <div class="btn btn-outline-success float-end mt-2">Make a potato</div>
+      <div class="btn-potato btn btn-outline-success float-end mt-2">Make a potato</div>
     </div>
   </div>
 
 
-  <div class="container-fluid position-absolute bottom-0">
-    <div class="alert alert-warning alert-dismissible fade show  ">
-      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-      <strong>Note:</strong> beta version, word for word translation only, no sentences
+  <div class="alerts position-absolute bottom-0">
+    <div class="container-fluid vw-100">
+      <div class="alert alert-warning alert-dismissible fade show  ">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Note:</strong> beta version, word for word translation only, no sentences
+      </div>
     </div>
   </div>
+
+
+
 
   <div class="scripts">
     <script src="public/dist/js/bootstrap.min.js"></script>
