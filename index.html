@@ -12,32 +12,36 @@
   <title class="page-title"></title>
 </head>
 
-<body class="bg-dark text-light min-vh-100 position-relative">
-  <div class="container">
+<body class="bg-dark text-light min-vh-100 position-relative container">
 
+  <header>
     <h1 class="text-success mt-0 pt-3">IPA</h1>
 
-    <div class="container-fluid">
-      <div class="row">
+  </header>
 
-        <div class="col-md-6 form-floating">
-          <textarea class="words form-control bg-dark text-info " placeholder="Write here"></textarea>
-          <label for="words" class="mx-3">Write here !</label>
-        </div>
+  <main class="container">
 
-        <div class="col-md-6 my-2 my-md-0">
-          <textarea class="translation form-control bg-dark text-light " placeholder="Translation" readonly></textarea>
-        </div>
+    <div class="row ">
 
+      <div class="col-md-6 form-floating">
+        <textarea class="words form-control bg-dark text-info " placeholder="Write here"></textarea>
+        <label for="words" class="label-words-area mx-3">Write here !</label>
       </div>
-      <div class="btn-potato btn btn-outline-success float-end mt-2">Make a potato</div>
+
+      <div class="col-md-6 my-2 my-md-0">
+        <textarea class="translation form-control bg-dark text-light " placeholder="Translation" readonly></textarea>
+      </div>
+
     </div>
-  </div>
+    <div class="btn-potato btn btn-outline-success float-end mt-2">Make a potato</div>
+    </div>
+  </main>
 
 
-  <div class="alerts position-absolute bottom-0">
-    <div class="container-fluid vw-100">
-      <div class="alert alert-warning alert-dismissible fade show  ">
+
+  <div class="alerts position-absolute bottom-0 w-100">
+    <div class="container-fluid">
+      <div class="alert alert-warning alert-dismissible fade show ">
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         <strong>Note:</strong> beta version, word for word translation only, no sentences
       </div>

@@ -7,9 +7,14 @@ console.log(`${pageTitle.textContent}`);
 const areaWords = $q('.words');
 const areaTranslation = $q('.translation');
 const btnPotato = $q('.btn-potato');
+const alerts = $q('.alerts');
+const labelWordsAreas = $q('.label-words-area');
+const defaultAreaHeight = 4;
+const wordHeight = 1.4;
+const maximunEnters = 10;
 
 const nothingToTranslate = `
-  <div class="container-fluid vw-100">
+  <div class="container-fluid">
     <div class="alert alert-danger alert-dismissible fade show  ">
       <button type="button" class="btn-close btn-nothing-to-translate" data-bs-dismiss="alert"></button>
       <strong>Alert:</strong> There is nothing to translate
@@ -23,21 +28,28 @@ const setHeightArea = (heigh) => {
 };
 
 const counterEnter = (text) => {
-  return text.split('\n').length;
+  return text.split('\n').length - 1;
+};
+
+const updateAreaHeight = () => {
+  let enters = counterEnter(areaWords.value);
+  if (enters < maximunEnters) {
+    setHeightArea(defaultAreaHeight + wordHeight * enters + 'rem');
+    labelWordsAreas.style.display = 'block';
+  } else {
+    labelWordsAreas.style.display = 'none';
+  }
 };
 
 // the magic starts from here
 
-setHeightArea('4rem');
+setHeightArea(defaultAreaHeight + 'rem');
 
-areaWords.addEventListener('keyup', (e) => {
-  console.log(counterEnter(areaWords.value));
-  areaWords.set;
-});
+areaWords.addEventListener('keyup', updateAreaHeight);
+areaWords.addEventListener('keydown', updateAreaHeight);
 
 btnPotato.addEventListener('click', (e) => {
   if (areaWords.value.length === 0) {
-    $q('.alerts').innerHTML += nothingToTranslate;
-    console.log('enter');
+    alerts.innerHTML += nothingToTranslate;
   }
 });
