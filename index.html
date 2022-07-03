@@ -14,10 +14,10 @@
   <title id="page-title"></title>
 </head>
 
-<body class="bg-dark text-light">
+<body class="bg-dark text-light min-vh-100 position-relative">
   <div class="container">
 
-    <h1 class="text-success">IPA</h1>
+    <h1 class="text-success mt-0 pt-3">IPA</h1>
 
     <div class="container-fluid">
       <div class="row">
@@ -25,11 +25,12 @@
         <div class="col-md-6 form-floating">
           <textarea class="form-control bg-dark text-info" id="comment" name="words"
             placeholder="Write here"></textarea>
-          <label for="comment" class="mx-3">English words. Write here</label>
+          <label for="comment" class="mx-3">Write here !</label>
         </div>
 
         <div class="col-md-6 my-2 my-md-0">
-          <textarea class="form-control bg-dark text-info" name="text" placeholder="Answer" readonly></textarea>
+          <textarea class="form-control bg-dark text-light" name="text" placeholder="Answer"
+            readonly>Translation</textarea>
         </div>
 
       </div>
@@ -38,11 +39,18 @@
   </div>
 
 
-
+  <div class="container-fluid position-absolute bottom-0">
+    <div class="alert alert-warning alert-dismissible fade show  ">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Note:</strong> beta version, word for word translation only, no sentences
+    </div>
+  </div>
 
   <div class="scripts">
+    <script src="public/dist/js/bootstrap.min.js"></script>
     <script src="public/dist/js/helpers/selector.js"></script>
     <script src="public/dist/js/app.js"></script>
+
   </div>
 </body>
 
