@@ -56,6 +56,7 @@ const splitter = (text) => {
   */
 
   text = text.trim();
+  text = text.toLowerCase();
   //replace all spaces for one space
   text = text.replace(/\s+/g, ' ');
   text = text.replaceAll(' ', '\n');
